@@ -57,7 +57,7 @@ function install_yay {
 
 function initialize {
     sudo pacman -Syu
-    sudo pacman -S wget git base-devel net-tools gnome xorg emacs htop
+    sudo pacman -S wget git base-devel net-tools gnome xorg emacs htop zsh
 }
 
 function install_emacs {
@@ -68,6 +68,8 @@ function install_emacs {
 function install_config {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ln -sf "$PWD"/etc/pacman.conf /etc/pacman.conf
+    ln -sf "$PWD"/xinitrc/.xinitrc ~/.xinitrc
+    ln -sf "$PWD"/zshrc/.zshrc ~/.zshrc
 }
 
 initialize
