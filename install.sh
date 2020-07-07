@@ -57,7 +57,9 @@ function install_yay {
 
 function initialize {
     sudo pacman -Syu
-    sudo pacman -S wget git base-devel net-tools gnome xorg emacs htop zsh
+    sudo pacman -S wget git base-devel net-tools gnome xorg emacs htop zsh networkmanager networkmanager-openvpn
+    sudo pacman -S ufw easy-rsa blender asp qemu chromium kvm kvm-amd libvirtd opencl-amdgpu-pro spotify zsh-autosuggestions zsh-syntax-highlighting
+    sudo pacman -S virt-manager hddtemp glxinfo hardinfo lm-sensors vlc stacer
 }
 
 function install_emacs {
@@ -70,12 +72,12 @@ function install_config {
     ln -sf "$PWD"/etc/pacman.conf /etc/pacman.conf
     ln -sf "$PWD"/xinitrc/.xinitrc ~/.xinitrc
     ln -sf "$PWD"/zshrc/.zshrc ~/.zshrc
+    ln -sf "$PWD"/.doom.d/config.el ~/.doom.d/config.el
+    ln -sf "$PWD"/.doom.d/init.el ~/.doom.d/init.el
+    ln -sf "$PWD"/.doom.d/packages.el ~/.doom.d/packages.el
 }
 
 initialize
 install_yay
+install_emacs
 install_config
-
-if ask "Do you want to install Doom Emacs?"; then
-    install_emacs
-fi
