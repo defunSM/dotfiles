@@ -69,11 +69,11 @@ function install_config {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     sudo ln -sf "$PWD"/etc/pacman.conf /etc/pacman.conf
     sudo ln -sf "$PWD"/xinitrc/.xinitrc ~/.xinitrc
-    sudo ln -sf "$PWD"/zshrc/.zshrc ~/.zshrc
-    sudo ln -sf "$PWD"/.doom.d/config.el ~/.doom.d/config.el
-    sudo ln -sf "$PWD"/.doom.d/init.el ~/.doom.d/init.el
-    sudo ln -sf "$PWD"/.doom.d/packages.el ~/.doom.d/packages.el
-    sudo linkDir -sf "$PWD"/zsh /etc/share/zsh
+    ln -sf "$PWD"/zshrc/.zshrc ~/.zshrc
+    ln -sf "$PWD"/.doom.d/config.el ~/.doom.d/config.el
+    ln -sf "$PWD"/.doom.d/init.el ~/.doom.d/init.el
+    ln -sf "$PWD"/.doom.d/packages.el ~/.doom.d/packages.el
+    sudo linkDir -sf "$PWD"/zsh /usr/share/zsh
 }
 
 function install_extra {
