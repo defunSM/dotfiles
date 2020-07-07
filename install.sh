@@ -80,7 +80,7 @@ function install_config {
 }
 
 function install_extra {
-    yay -S virt-manager hddtemp glxinfo hardinfo vlc hddtemp glxinfo hardinfo vlc stacer gnome-tweaks chrome-gnome-shell
+    yay -S virt-manager hddtemp glxinfo hardinfo vlc hddtemp glxinfo hardinfo vlc stacer gnome-tweaks chrome-gnome-shell numix-square-icon-theme-git numix-cursor-theme
 }
 
 initialize
@@ -88,3 +88,4 @@ install_yay
 install_emacs
 install_config
 install_extra
+cat $"PWD"/end.txt
