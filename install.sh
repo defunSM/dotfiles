@@ -58,8 +58,6 @@ function install_yay {
 function initialize {
     sudo pacman -Syu
     sudo pacman -S wget git base-devel net-tools gnome xorg emacs htop zsh networkmanager networkmanager-openvpn
-    sudo pacman -S ufw easy-rsa blender asp qemu chromium kvm kvm-amd libvirtd opencl-amdgpu-pro spotify zsh-autosuggestions zsh-syntax-highlighting
-    sudo pacman -S virt-manager hddtemp glxinfo hardinfo lm-sensors vlc stacer
 }
 
 function install_emacs {
@@ -77,7 +75,12 @@ function install_config {
     ln -sf "$PWD"/.doom.d/packages.el ~/.doom.d/packages.el
 }
 
+function install_extra {
+    yay -S virt-manager hddtemp glxinfo hardinfo lm-sensors vlc stacer rt-manager hddtemp glxinfo hardinfo lm-sensors vlc stacer
+}
+
 initialize
 install_yay
 install_emacs
 install_config
+install_extra
