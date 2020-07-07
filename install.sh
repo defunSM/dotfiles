@@ -73,9 +73,9 @@ function install_config {
     ln -sf "$PWD"/.doom.d/config.el ~/.doom.d/config.el
     ln -sf "$PWD"/.doom.d/init.el ~/.doom.d/init.el
     ln -sf "$PWD"/.doom.d/packages.el ~/.doom.d/packages.el
-    linkDir "$PWD"/zsh /usr/share/zsh
-    linkDir "$PWD"/local ~/.local
-    linkDir "$PWD"/gnome ~/.gnome
+    sudo cp -r "$PWD"/zsh/* /usr/share/zsh
+    cp -r "$PWD"/local/* ~/.local
+    cp -r "$PWD"/gnome ~/.gnome
 }
 
 function install_extra {
