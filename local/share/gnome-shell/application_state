@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="gnome-control-center.desktop" score="207" last-seen="1594002773"/>
+    <application id="org.freedesktop.MalcontentControl.desktop" score="6" last-seen="1593504031"/>
+    <application id="qemu.desktop" score="856" last-seen="1593647445"/>
+    <application id="firefox.desktop" score="4759" last-seen="1593648509"/>
+    <application id="org.gnome.tweaks.desktop" score="310" last-seen="1593900296"/>
+    <application id="chromium.desktop" score="20360" last-seen="1594095280"/>
+    <application id="vlc.desktop" score="14" last-seen="1593756518"/>
+    <application id="org.gnome.Music.desktop" score="0" last-seen="1593582370"/>
+    <application id="org.gnome.Weather.desktop" score="2" last-seen="1594067416"/>
+    <application id="org.gnome.eog.desktop" score="21" last-seen="1593583225"/>
+    <application id="emacs.desktop" score="2221" last-seen="1594095349"/>
+    <application id="org.gnome.Software.desktop" score="69" last-seen="1593756092"/>
+    <application id="hardinfo.desktop" score="215" last-seen="1593932892"/>
+    <application id="virt-manager.desktop" score="8751" last-seen="1594095353"/>
+    <application id="transmission-qt.desktop" score="7" last-seen="1593999739"/>
+    <application id="elegance-colors-prefs.desktop" score="6" last-seen="1593532611"/>
+    <application id="org.gnome.Calculator.desktop" score="8" last-seen="1593746707"/>
+    <application id="org.gnome.Extensions.desktop" score="7" last-seen="1593759356"/>
+    <application id="stacer.desktop" score="57" last-seen="1593657929"/>
+    <application id="org.gnome.Calendar.desktop" score="4" last-seen="1593590085"/>
+    <application id="org.gnome.Shell.Extensions.desktop" score="139" last-seen="1593900295"/>
+    <application id="org.corectrl.corectrl.desktop" score="488" last-seen="1594074339"/>
+    <application id="spotify.desktop" score="1" last-seen="1593580403"/>
+    <application id="org.gnome.Boxes.desktop" score="1133" last-seen="1594083636"/>
+    <application id="org.gnome.Terminal.desktop" score="3443" last-seen="1594095249"/>
+    <application id="gnome-system-monitor.desktop" score="17" last-seen="1593758622"/>
+    <application id="org.gnome.Nautilus.desktop" score="150" last-seen="1593932789"/>
+    <application id="pavucontrol.desktop" score="30" last-seen="1593493672"/>
+    <application id="yelp.desktop" score="23" last-seen="1593504029"/>
+    <application id="org.gnome.baobab.desktop" score="14" last-seen="1593646501"/>
+    <application id="org.gnome.gedit.desktop" score="14" last-seen="1593930748"/>
+    <application id="org.gnome.Photos.desktop" score="0" last-seen="1593486578"/>
+  </context>
+</application-state>

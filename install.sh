@@ -73,11 +73,13 @@ function install_config {
     ln -sf "$PWD"/.doom.d/config.el ~/.doom.d/config.el
     ln -sf "$PWD"/.doom.d/init.el ~/.doom.d/init.el
     ln -sf "$PWD"/.doom.d/packages.el ~/.doom.d/packages.el
-    sudo linkDir -sf "$PWD"/zsh /usr/share/zsh
+    linkDir "$PWD"/zsh /usr/share/zsh
+    linkDir "$PWD"/local ~/.local
+    linkDir "$PWD"/gnome ~/.gnome
 }
 
 function install_extra {
-    yay -S virt-manager hddtemp glxinfo hardinfo lm-sensors vlc hddtemp glxinfo hardinfo vlc stacer
+    yay -S virt-manager hddtemp glxinfo hardinfo vlc hddtemp glxinfo hardinfo vlc stacer
 }
 
 initialize
