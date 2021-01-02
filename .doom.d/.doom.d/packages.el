@@ -1,0 +1,1 @@
+/home/salman1567/.doom.d/packages.el
