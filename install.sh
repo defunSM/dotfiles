@@ -3,7 +3,6 @@ set -euo pipefail
 
 # Install paru
 
-$ZSH_CUSTOM = "~/.oh-my-zsh"
 
 function install_paru {
     pacman -S --needed base-devel sudo
@@ -13,7 +12,7 @@ function install_paru {
 }
 
 function install_dependencies {
-    paru -S emacs alacritty bspwm picom polybar sxhkd nvim stow zsh chromium
+    paru -S emacs alacritty bspwm picom polybar vagrant sxhkd nvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
 }
 
 function setup_doom_emacs {
@@ -23,8 +22,12 @@ function setup_doom_emacs {
 
 function setup_oh_my_zsh {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+}
+
+function setup_development_env {
+    vagrant plugin install vagrant-vbguest vagrant-libvirt
+    systemctl start libvirtd
+    systemctl enable libvirtd
 }
 
 install_paru
