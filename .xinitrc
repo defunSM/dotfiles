@@ -1,0 +1,1 @@
+/home/salman1567/.xinitrc
