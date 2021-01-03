@@ -30,7 +30,7 @@ function setup_development_env {
     systemctl enable libvirtd
 }
 
-install_paru
+#install_paru
 install_dependencies
 setup_doom_emacs
 setup_oh_my_zsh
