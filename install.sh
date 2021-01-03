@@ -4,15 +4,15 @@ set -euo pipefail
 # Install paru
 
 
-function install_paru {
-    pacman -S --needed base-devel sudo
-    git clone https://aur.archlinux.org/paru.git
-    cd paru
-    makepkg -si
-}
+# function install_paru {
+#     pacman -S --needed base-devel sudo
+#     git clone https://aur.archlinux.org/paru.git
+#     cd paru
+#     makepkg -si
+# }
 
 function install_dependencies {
-    paru -S emacs alacritty bspwm picom polybar vagrant sxhkd nvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
+    pacman -S base-devel sudo emacs alacritty bspwm picom polybar vagrant sxhkd nvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
 }
 
 function setup_doom_emacs {
