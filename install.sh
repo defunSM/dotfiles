@@ -5,14 +5,10 @@
 
 
 function install_paru {
-    pacman -S --needed base-devel <<EOF
-
-Y
-1
-EOF
+    printf 'Y\n1\n' | pacman -S --needed base-devel
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
     cd paru
-    printf '1\nY\nY\nY' | sudo -u vagrant makepkg -si
+    printf '1\nY\nY\n' | sudo -u vagrant makepkg -si
 }
 
 function install_dependencies {
