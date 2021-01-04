@@ -10,7 +10,7 @@ function install_paru {
 Y
 EOF
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
-    sudo -u vagrant home/vagrant/paru/makepkg -si
+    (cd paru; sudo -u vagrant makepkg -si)
 }
 
 function install_dependencies {
