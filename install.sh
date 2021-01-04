@@ -3,10 +3,8 @@
 
 # Install paru
 
-$USER = 'vagrant'
-
 function install_paru {
-    printf '\nY\n1\n' | pacman -S --needed base-devel
+    printf '\nY\n1\n' | sudo pacman -S --needed base-devel
     sudo -u $USER git clone https://aur.archlinux.org/paru.git
     cd paru
     printf '1\nY\nY\nY\nY\n' | sudo -u $USER makepkg -si
