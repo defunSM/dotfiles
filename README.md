@@ -43,7 +43,7 @@ I called my pool storage Downloads if you name it something else make sure to ch
     sudo virsh pool-autostart Downloads
 </code>
 
-### Start the vagrant
+### Start up vagrant
 <code>
     vagrant up
 </code>
