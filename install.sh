@@ -11,7 +11,9 @@ Y
 1
 EOF
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
-    (cd paru; sudo -u vagrant makepkg -si <<< 'Y' )
+    (cd paru; sudo -u vagrant makepkg -si <<EOF )
+1
+EOF
 }
 
 function install_dependencies {
