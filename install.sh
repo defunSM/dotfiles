@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-#set -euo pipefail
+
+set -o errexit
+set -o pipefail
+set -o nounset
+set -o xtrace
 
 # Install paru
 
