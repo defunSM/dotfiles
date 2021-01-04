@@ -15,7 +15,7 @@ function install_paru {
 }
 
 function install_dependencies {
-    paru -S base-devel emacs ly alacritty bspwm picom polybar sxhkd python-pynvim stow zsh chromium qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi man
+    paru -S base-devel emacs ly alacritty bspwm picom polybar sxhkd python-pynvim stow zsh chromium qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi man htop bashtop
     sudo pacman -S xorg xorg-xinit xterm
 }
 
