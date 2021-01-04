@@ -4,19 +4,19 @@
 # Install paru
 
 function install_paru {
-    printf '\nY\n1\n' | sudo pacman -S --needed base-devel
-    sudo -u $USER git clone https://aur.archlinux.org/paru.git
+    sudo pacman -S --needed base-devel
+    git clone https://aur.archlinux.org/paru.git
     cd paru
-    printf '1\nY\nY\nY\nY\n' | sudo -u $USER makepkg -si
+    makepkg -si
 }
 
 function install_dependencies {
-    sudo -u $USER paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi
+     paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi
 }
 
 function setup_doom_emacs {
-    sudo -u $USER git clone --depth 1 https://github.com/hlissner/doom-emacs /home/$USER/.emacs.d
-    sudo -u $USER /home/$USER/.emacs.d/bin/doom install
+    git clone --depth 1 https://github.com/hlissner/doom-emacs /home/$USER/.emacs.d
+    /home/$USER/.emacs.d/bin/doom install
 }
 
 function setup_oh_my_zsh {
@@ -24,9 +24,9 @@ function setup_oh_my_zsh {
 }
 
 function setup_development_env {
-    sudo -u $USER vagrant plugin install vagrant-vbguest vagrant-libvirt
-    systemctl start libvirtd
-    systemctl enable libvirtd
+    vagrant plugin install vagrant-vbguest vagrant-libvirt
+    sudo systemctl start libvirtd
+    sudo systemctl enable libvirtd
 }
 
 install_paru
