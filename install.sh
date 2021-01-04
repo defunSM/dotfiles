@@ -8,16 +8,16 @@ function install_paru {
     printf '\nY\n1\n' | pacman -S --needed base-devel
     sudo -u $USER git clone https://aur.archlinux.org/paru.git
     cd paru
-    printf '1\nY\nY\nY\nY\n' | sudo -u vagrant makepkg -si
+    printf '1\nY\nY\nY\nY\n' | sudo -u $USER makepkg -si
 }
 
 function install_dependencies {
-    sudo pacman -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
+    sudo -u $USER paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
 }
 
 function setup_doom_emacs {
-    sudo -u $USER git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-    sudo -u $USER ~/.emacs.d/bin/doom install
+    sudo -u $USER git clone --depth 1 https://github.com/hlissner/doom-emacs /home/$USER/.emacs.d
+    sudo -u $USER /home/$USER/.emacs.d/bin/doom install
 }
 
 function setup_oh_my_zsh {
