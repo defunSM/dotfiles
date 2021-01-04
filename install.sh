@@ -31,6 +31,6 @@ function setup_development_env {
 }
 
 install_paru
-yes | install_dependencies
-yes | setup_doom_emacs
-yes | setup_oh_my_zsh
+install_dependencies
+setup_doom_emacs
+setup_oh_my_zsh
