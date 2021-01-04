@@ -24,7 +24,7 @@ Note: DO not plugin install vagrant-share BUG (https://github.com/hashicorp/vagr
 
 Arch linux Wiki for setting it up -> https://wiki.archlinux.org/index.php/QEMU
 
-#### 2. Setting up vagrant on arch linux host
+#### 2. Setting up Vagrant on arch linux host
 
 ```
     pacman -S fmt libvirt virt-manager base-devel qemu
@@ -32,7 +32,7 @@ Arch linux Wiki for setting it up -> https://wiki.archlinux.org/index.php/QEMU
     vagrant plugin install vagrant-vbguest vagrant-mutat vagrant-libvirt
 ```
 
-#### 3. Cloning repo to get vagrantfile and bootstrap.sh (Can delete the dotfiles on host)
+#### 3. Cloning repo to get Vagrantfile and bootstrap.sh (Can delete the dotfiles on host)
 
 ```    
     cd arch-vagrant-vm
