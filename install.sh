@@ -5,19 +5,21 @@ set -euo pipefail
 
 
 function install_paru {
-    pacman -S --needed base-devel
+    pacman -S --needed base-devel <<EOF
+'1'
+EOF
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
     cd paru
     sudo -u vagrant makepkg -si
 }
 
 function install_dependencies {
-    sudo -u vagrant paru -S base-devel emacs alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
+    sudo -u vagrant paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
 }
 
 function setup_doom_emacs {
     sudo -u vagrant git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-    sudo -u vagrant ~/.emacs.d/bin/doom install
+    sudo vagrant ~/.emacs.d/bin/doom install
 }
 
 function setup_oh_my_zsh {
@@ -30,7 +32,7 @@ function setup_development_env {
     systemctl enable libvirtd
 }
 
-install_paru
-install_dependencies
-setup_doom_emacs
-setup_oh_my_zsh
+yes | install_paru
+yes | install_dependencies
+yes | setup_doom_emacs
+yes | setup_oh_my_zsh
