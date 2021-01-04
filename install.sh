@@ -30,7 +30,13 @@ function setup_development_env {
     sudo systemctl enable libvirtd
 }
 
+function setup_dotfiles {
+    cd dotfiles
+    stow -v --dotfiles --target=$HOME *
+}
+
 install_paru
 install_dependencies
 setup_doom_emacs
 setup_oh_my_zsh
+setup_dotfiles
