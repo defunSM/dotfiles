@@ -3,6 +3,7 @@
 
 # Install paru
 
+$USER = vagrant
 
 function install_paru {
     printf '\nY\n1\n' | pacman -S --needed base-devel
