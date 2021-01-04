@@ -20,11 +20,11 @@ Installs vagrant on arch linux
 
 Note: DO not plugin install vagrant-share BUG (https://github.com/hashicorp/vagrant/issues/10022)
 
-#### Setting up QEMU/KVM and libvirt
+#### 1. Setting up QEMU/KVM and libvirt
 
 Arch linux Wiki for setting it up -> https://wiki.archlinux.org/index.php/QEMU
 
-#### Setting up vagrant on arch linux host
+#### 2. Setting up vagrant on arch linux host
 
 ```
     pacman -S fmt libvirt virt-manager base-devel qemu
@@ -32,14 +32,14 @@ Arch linux Wiki for setting it up -> https://wiki.archlinux.org/index.php/QEMU
     vagrant plugin install vagrant-vbguest vagrant-mutat vagrant-libvirt
 ```
 
-#### Cloning repo to get vagrantfile and bootstrap.sh (Can delete the dotfiles on host)
+#### 3. Cloning repo to get vagrantfile and bootstrap.sh (Can delete the dotfiles on host)
 
 ```    
     cd arch-vagrant-vm
     git clone https://github.com/defunSM/dotfiles.git
 ```
 
-#### Define a storage pool using virsh
+#### 4. Define a storage pool using virsh
 I called my pool storage Downloads if you name it something else make sure to change it in Vagrantfile as well.
 
 ``` 
@@ -49,7 +49,7 @@ I called my pool storage Downloads if you name it something else make sure to ch
     sudo virsh pool-autostart Downloads
 ```
 
-#### Start up vagrant
+#### 5. Start up vagrant
 
 ```    
     vagrant up
