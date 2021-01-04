@@ -7,6 +7,7 @@ set -euo pipefail
 function install_paru {
     pacman -S --needed base-devel <<EOF
 1
+Y
 EOF
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
     cd paru
@@ -32,7 +33,7 @@ function setup_development_env {
     systemctl enable libvirtd
 }
 
-yes | install_paru
+install_paru
 yes | install_dependencies
 yes | setup_doom_emacs
 yes | setup_oh_my_zsh
