@@ -9,7 +9,8 @@ This will set up dependencies on arch linux, doom emacs, oh my zsh and other dot
 ## Purpose
 
 This repo holds files that helps jumpstart my personal arch linux configurations. 
-Both on baremetal and also using QEMU/KVM to automate creating a developmental arch linux development VM.
+Both on baremetal and also using QEMU/KVM, vagrant and libvirt in automating some of the creation of an arch linux VM.
+The arch linux environment can be used for developmental purposes and as a sandboxing VM.
 
 ## Usage
 
