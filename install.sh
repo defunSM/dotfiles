@@ -12,7 +12,7 @@ function install_paru {
 }
 
 function install_dependencies {
-    sudo -u vagrant paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
+    sudo pacman -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
 }
 
 function setup_doom_emacs {
