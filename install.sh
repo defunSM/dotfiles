@@ -16,8 +16,8 @@ function install_dependencies {
 }
 
 function setup_doom_emacs {
-    sudo git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-    sudo ~/.emacs.d/bin/doom install
+    sudo -u vagrant git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+    sudo -u vagrant ~/.emacs.d/bin/doom install
 }
 
 function setup_oh_my_zsh {
