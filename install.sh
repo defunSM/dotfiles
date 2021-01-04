@@ -8,7 +8,7 @@ function install_paru {
     printf '\nY\n1\n' | pacman -S --needed base-devel
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
     cd paru
-    printf '1\nY\nY\n' | sudo -u vagrant makepkg -si <<< 'Y'
+    printf '1\nY\nY\n' | sudo -u vagrant makepkg -si
 }
 
 function install_dependencies {
@@ -16,8 +16,8 @@ function install_dependencies {
 }
 
 function setup_doom_emacs {
-    sudo -u vagrant git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-    sudo vagrant ~/.emacs.d/bin/doom install
+    sudo git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+    sudo ~/.emacs.d/bin/doom install
 }
 
 function setup_oh_my_zsh {
