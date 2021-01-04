@@ -11,7 +11,7 @@ function install_paru {
 }
 
 function install_dependencies {
-    sudo -u $USER paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt
+    sudo -u $USER paru -S base-devel emacs ly alacritty bspwm picom polybar vagrant sxhkd python-pynvim stow zsh chromium vagrant qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi
 }
 
 function setup_doom_emacs {
