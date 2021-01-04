@@ -15,6 +15,8 @@ EOF
 1
 Y
 Y
+Y
+Y
 EOF
 }
 
