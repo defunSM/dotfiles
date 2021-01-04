@@ -14,6 +14,7 @@ EOF
     (cd paru; sudo -u vagrant makepkg -si <<EOF )
 1
 Y
+Y
 EOF
 }
 
