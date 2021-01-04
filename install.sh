@@ -6,7 +6,7 @@ set -euo pipefail
 
 function install_paru {
     pacman -S --needed base-devel <<EOF
-1
+all
 Y
 EOF
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
