@@ -7,3 +7,9 @@ This will set up dependencies on arch linux, doom emacs, oh my zsh and other dot
 
 Vagrantfile - to autostart a vm with libvirt
 
+## How to use this repo
+
+### Setting up a test vm with arch linux
+
+todo..
+
