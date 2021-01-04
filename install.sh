@@ -5,7 +5,7 @@
 
 
 function install_paru {
-    printf 'Y\n1\n' | pacman -S --needed base-devel
+    printf '\nY\n1\n' | pacman -S --needed base-devel
     sudo -u vagrant git clone https://aur.archlinux.org/paru.git
     cd paru
     printf '1\nY\nY\n' | sudo -u vagrant makepkg -si
