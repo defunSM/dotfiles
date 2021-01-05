@@ -15,8 +15,10 @@ function install_paru {
 }
 
 function install_dependencies {
-    paru -S base-devel emacs ly alacritty bspwm picom polybar sxhkd python-pynvim stow zsh chromium qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi man htop bashtop
+    paru -S base-devel emacs ly alacritty bspwm picom polybar sxhkd python-pynvim stow zsh chromium qemu ebtables dnsmasq bridge-utils virt-manager libvirt vi man htop bashtop xrandr arandr lxappearance gnome gnome-tweaks
     sudo pacman -S xorg xorg-xinit xterm
+    sudo systemctl enable gdm
+    echo 'export XDG_SESSION_TYPE=x11\nexport GDK_BACKEND=x11\nexec gnome-session' >> /home/$USER/.xinitrc
 }
 
 function setup_doom_emacs {
@@ -40,11 +42,12 @@ function setup_development_env {
 
 function setup_dotfiles {
     cd /home/$USER/dotfiles/dotfiles
-    stow -v --dotfiles --target=$HOME *
+    stow -v --dotfiles --target=$HOME bspwm sxhkd picom Xresources
 }
 
 install_paru
 install_dependencies
 setup_doom_emacs
 setup_oh_my_zsh
+setup_development_env
 setup_dotfiles
