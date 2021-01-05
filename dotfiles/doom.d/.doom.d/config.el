@@ -101,7 +101,7 @@
 ;;                  :position (point)))
 
 
-(company-posframe-mode 1)
+;(company-posframe-mode 1)
 
 ;;(setq fancy-splash-image (concat doom-private-dir "splash/doom-emacs-bw-light.svg"))
 
