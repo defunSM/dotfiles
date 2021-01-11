@@ -7,6 +7,8 @@ tablet.sh &
 redshift -P -O 4000 &
 nitrogen --restore &
 xsetroot -cursor_name left_ptr &
+nm-applet &
+#sudo -u salman1567 /home/salman1567/bin/nmgui.sh &
 picom &
 
 
@@ -20,8 +22,11 @@ bspc config border_width         3
 bspc config window_gap          12
 bspc config focused_border_color "#FFFFFF"
 bspc config normal_border_color "#5E81AC"
+bspc config active_border_color "#FE81AC"
+
+bspc config pointer_follows_focus true
 bspc config focus_follows_pointer true
-#bspc config focus_border_color  "#FFFFFF"
+bspc config ignore_ewmh_fullscreen all
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
